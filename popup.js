@@ -1,45 +1,46 @@
-let myURLS = []
-const inputEl = document.getElementById("input-el")
-const saveBtn = document.getElementById("button-save")
-const deleteBtn = document.getElementById("button-delete")
-const listEl = document.getElementById("a-images")
-const urlsFromLocalStorage = JSON.parse( localStorage.getItem("myURLS") )
+let myURLS = [];
+const inputEl = document.getElementById('input-el');
+const saveBtn = document.getElementById('button-save');
+const deleteBtn = document.getElementById('button-delete');
+const listEl = document.getElementById('a-images');
+const urlsFromLocalStorage = JSON.parse(localStorage.getItem('myURLS'));
 
 // let changeDogNext = document.getElementById('nextDog');
 // let changeDogPrev = document.getElementById('previousDog');
 
 if (urlsFromLocalStorage) {
-    myURLS = urlsFromLocalStorage
-    render(myURLS)
+  myURLS = urlsFromLocalStorage;
+  render(myURLS);
 }
+
 
 
 function render(urls) {
-    let listItems = ""
-    for (let i = 0; i < urls.length; i++) {
-        listItems += `
-            <li>
+  let listItems = ''
+  for (let i = 0; i < urls.length; i++) {
+    listItems += `
+            <div>
                  <a target='_blank' href='${urls[i]}'>
                     ${urls[i]}
                  </a>
-                 <img src='${urls[i]}'>
-            </li>
+                 <img src='${urls[i]}'></img>
+            </div>
         `
-    }
-    listEl.innerHTML = listItems
+  }
+  listEl.innerHTML = listItems
 }
 
-saveBtn.addEventListener("click", function() {
-    myURLS.push(inputEl.value)
-    inputEl.value = ""
-    localStorage.setItem("myURLS", JSON.stringify(myURLS) )
-    render(myURLS)
+saveBtn.addEventListener('click', function () {
+  myURLS.push(inputEl.value)
+  inputEl.value = ''
+  localStorage.setItem('myURLS', JSON.stringify(myURLS))
+  render(myURLS)
 })
 
-deleteBtn.addEventListener("click", function() {
-    localStorage.clear()
-    myURLS = []
-    render(myURLS)
+deleteBtn.addEventListener('click', function () {
+  localStorage.clear()
+  myURLS = []
+  render(myURLS)
 })
 
 //old stuff

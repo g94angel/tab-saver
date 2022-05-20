@@ -1,3 +1,7 @@
+h3 {
+  text-align: center;
+  margin: 10px;
+}
 button {
   /* height: 30px;
   width: 30px; */
@@ -5,7 +9,8 @@ button {
   outline: none;
   margin: 10px;
   border: 1px solid black;
-  border-radius: 3px;
+  border-radius: 10px;
+    padding: 5px 10px;
 
 }
 
@@ -17,6 +22,7 @@ button {
 
 body {
   background-color: azure;
+  margin: 10px;
 }
 
 /* 
@@ -26,8 +32,32 @@ button.current {
 } */
 #button-save {
   background-color: green;
+  /* border-radius: 10px; */
 }
 
 #button-delete {
-  background-color: red;
+  background-color: rgb(185, 14, 14);
+    border-radius: 10px;
+  }
+  
+  input {
+    border-radius: 15px;
+    padding: 0 10px;
+    /* text-align: center; */
+    line-height: 30px;
+    margin: auto;
+    border: 1px solid black;
+    width: 80%;
+    /* padding: 5px; */
+  }
+  
+  .input {
+    margin: 0 auto;
+    text-align: center;
+    /* width: 100%; */
+  }
+  
+  
+  img {
+    width: 90%;
 }
